@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+    <!-- Header of Login Page Youssef Ababou -->
+    <section class="header-login">
+        <div class="overlay"></div>
+        <div class="content">
+            <div>
+                <h2>MY ACCOUNT</h2>
+                <p><span>MKYD</span>> MY Account</p>
+            </div>
+        </div>
+    </section>
+    <!-- Header of Login Page Youssef Ababou -->
+    <section class="login">
+        <div class="card">
+            <div class="image-right">
+                <div class="overlay"></div>
+                <img src="images/bg-register.jpg" alt="" />
+            </div>
+            <div class="">
+                <h3>Register</h3>
+                <form id="registrationForm">
+                    <label for="name">Name <span>*</span></label>
+                    <input type="text" placeholder="Enter Your Name Here" id="name" name="name" required/>
+                    <label for="email">Email address <span>*</span></label>
+                    <input type="email"  placeholder="Enter Your Email Here" id="email" name="email" required/>
+                    <label for="password">Password <span>*</span></label>
+                    <input type="password" placeholder="Enter Your Password Here" id="password" name="password" required/>
+                    <button id="bottone1" type="submit"><strong>Register</strong></button>
+                </form>
+                <div id="message"></div>
+                
+                <a href="login.html">Login</a>
+            </div>
+        </div>
+    </section>
+    <div class="card"></div>
+    <!-- Footer Youssef Ababou -->
+    <footer>
+        <section class="contact">
+            <div class="info">
+                <i class="bx bx-map"></i>
+                <div>
+                    <h5>Find us</h5>
+                    <p>1010 Avenue, sw54321, Rabat</p>
+                </div>
+            </div>
+            <div class="info">
+                <i class="bx bxs-phone-call"></i>
+                <div>
+                    <h5>Find us</h5>
+                    <p>1010 Avenue, sw54321, Rabat</p>
+                </div>
+            </div>
+            <div class="info">
+                <i class="bx bx-envelope"></i>
+                <div>
+                    <h5>Find us</h5>
+                    <p>1010 Avenue, sw54321, Rabat</p>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="col-1">
+                <h1>One<span>Football</span></h1>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos nihil
+                    cupiditate facere quos unde magni similique sed esse harum fugiat!
+                </p>
+                <h3>Follow us</h3>
+                <div>
+                    <i class="bx bxl-facebook-circle"></i>
+                    <i class="bx bxl-twitter"></i>
+                    <i class="bx bxl-instagram"></i>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <h2>Useful Links</h2>
+                <div class="line"></div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Our services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-3">
+                <h2>Subscribe</h2>
+                <div class="line"></div>
+
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                <div class="Subscribe">
+                    <input type="text" placeholder="Email Address" />
+                    <button>
+                        <i class="bx bx-send"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/register.js"></script>
+</body>
+
+</html>

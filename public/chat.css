@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+:root {
+  --yellow: #e1ff57;
+  --black: #02050a;
+}
+.sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    height: 95vh;
+    margin: 12px 5px 9px 10px;
+    padding: 0 1.7rem;
+    border-radius: 20px;
+    color: var(--yellow);
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: var(--black);
+    box-shadow:
+    4.5px 4.5px 1.8px -96px rgba(0, 0, 0, 0.014),
+    12.5px 12.5px 5px -96px rgba(0, 0, 0, 0.02),
+    30.1px 30.1px 12.1px -96px rgba(0, 0, 0, 0.026),
+    100px 100px 40px -96px rgba(0, 0, 0, 0.04)
+  ;
+  }
+  
+  .logo {
+    margin: 15px 0px 33px 0px;
+    color: var(--yellow);
+  }
+  
+  .menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;  
+  }
+  
+  .menu li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    margin-top: 20px;
+    border-radius: 20%;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .menu li:hover,
+  .active {
+    background: #e7e6e658;
+  }
+  
+  .menu a {
+    color: var(--yellow);
+    font-size: 17px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+  }
+  
+  .menu a span {
+    overflow: hidden;
+  }
+  
+  .menu a i {
+    font-size: 1.2rem;
+  }
+  
+  .logout i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    margin-top: 20px;
+    border-radius: 20%;
+    transition: all 0.5s ease-in-out;
+  }
+
+
+
+.rounded-separator {
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+}
+
+
+.icon-large {
+    font-size: 1.5rem;
+}
+
+.sidebar-gradient {
+    background: #09090B;
+}
+
+.chat-content {
+    padding-bottom: 1rem;
+}
+#gamesList {
+    cursor: pointer;
+}
+
+.tab-btn {
+    flex-grow: 1;
+    padding: 10px 10px 10px 5px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-weight: bold;
+    color: #A1A1AA;
+}
+
+
+.members {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.365rem;
+    width: auto;
+}
+
+/* Message Class */
+
+.message {
+    padding: 0.75rem; 
+    margin-bottom: 0.5rem; 
+    margin-left: 20rem; 
+    align-self: flex-end; 
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem; 
+    background-color: #A7F3D0;
+    color: #374151; 
+}
+
+#messageArea {
+    overflow-y: scroll;
+    scrollbar-color: #e1ff57 transparent;
+    scrollbar-width: thin;
+    padding-right: 1%;
+    height: 71.2vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#content-t-1 {
+    overflow-y: scroll;
+    padding-right: 2%;
+    scrollbar-color: #e1ff57 transparent;
+    scrollbar-width: thin;
+    height: 80vh;
+}
+.game-preview {
+    display: flex; 
+    padding: 0.5rem; 
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem; 
+    align-items: center; 
+    border-radius: 0.5rem; 
+    background-color: #27272A; 
+}
+.game-preview img  {
+    margin-right: 0.75rem; 
+    border-radius: 9999px; 
+    width: 3rem; 
+    height: 3rem; 
+}
+
+.game-name{
+    font-size: 0.875rem;
+    line-height: 1.25rem; 
+    font-weight: 500; 
+    color: #FAFAFA; 
+}
+
+.last-message-preview {
+    font-size: 0.75rem;
+    line-height: 1rem; 
+    color: #A1A1AA; 
+}
+
+
+
+input:focus {
+    outline: none;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+p {
+    overflow-wrap: break-word;
+}
+
+
+

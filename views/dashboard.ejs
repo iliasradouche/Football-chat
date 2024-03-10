@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="dashboard.ejs">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <h1>F.</h1>
+        </div>
+        <ul class="menu">
+            <li class="active">
+                <a href="#"><i class="fas fa-tachometer-alt"></i></a>
+            </li>
+
+            <li>
+                <a href="#"><i class="fas fa-chart-bar"></i></a>
+            </li>
+
+            <li>
+                <a href="#"><i class="fas fa-briefcase"></i></a>
+            </li>
+
+            <li>
+                <a href="#"><i class="fas fa-question-circle"></i></a>
+            </li>
+
+            <li>
+                <a href="#"><i class="fas fa-cog"></i></a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!--  kkkkkkkkkk  -->
+    <section>
+        <div id="iii">
+            <div class="part-top">
+                <div class="side-1">
+                    <div class="nesslwl">
+                        <span id="welcomeMessage">Hello Player!</span>
+                        <p>It's good to see you again.</p>
+                    </div>
+                    <img src="images/avatar.png" alt="avatar" />
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <div class="uuu">
+                <h1>Matches</h1>
+            </div>
+            <div class="list">
+                <a href="#">All Matches</a>
+                <a href="#">The Newest</a>
+                <a href="#">Top Rated</a>
+                <a href="#">Most Popular</a>
+            </div>
+        </div>
+
+        <div class="matches">
+            <ul>
+                <% games.forEach(game=> { %>
+                    <li id="game_<%= game._id %>">
+                        <h5>
+                            <%= game.name %>
+                        </h5>
+                        <div class="bbb">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>
+                                <%= new Date(game.date).toLocaleDateString('en-US', { month: 'long' , day: 'numeric' ,
+                                    year: 'numeric' }) %>
+                            </p>
+                        </div>
+                        <div class="bbb">
+                            <i class="fa-solid fa-futbol"></i>
+                            <p><%= game.participants.length %>/<%= game.maxParticipants %></p>
+                        </div>
+                        <div class="bbb">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>
+                                <%= game.city %>
+                            </p>
+                        </div>
+                        <button onclick="joinGame('<%= game._id %>')">Join Game</button>
+                    </li>
+                    <% }) %>
+            </ul>
+    </section>
+
+    <section class="side-2">
+        <div class="toppp">
+            <!--
+            <div class="prfl">
+                <i class="fa-solid fa-magnifying-glass" id="search"></i>
+                <form class="form"><input type="text" /></form>
+                <i class="fa-regular fa-bell"></i>
+                <img src="images/avatar.png" alt="profile" />
+            </div>
+            -->
+
+        </div>
+        <div class="mtch_cmpltd">
+            <div class="fm">
+                <p><span id="gamesCount">0 </span></p>
+                <p>Games Played</p>
+            </div>
+            <div class="sm">
+                <p><span id="userGamesCount">0</span></p>
+                <p>Games Created</p>
+            </div>
+        </div>  
+
+
+
+        <div id="iii">
+            <div class="stat">
+                <div class="pp">
+                    <h2>Create a New Game</h2>
+                    <form id="createGameForm" autocomplete="off">
+                        <div class="form-items">
+                            <input type="text" id="name" placeholder="Game Name" required>
+                            <input type="text" id="city" placeholder="City" required>
+                            <input type="number" id="maxParticipants" placeholder="Max Participants" required>
+                            <input type="date" id="date" placeholder="Date" required>
+                            <button type="submit">Create Game</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="weather-info">
+            <div class="container">
+                <img id="weather-icon" src="" alt="weather situation">
+            </div>
+
+            <div class="card-header">
+                <strong><span id="location-value"></span></strong>
+                <span id="weather-value"></span>
+                <span id="temperature-value"></span>
+                <span id="humidity-value"></span>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/weather.js"></script>
+</body>
+
+</html>

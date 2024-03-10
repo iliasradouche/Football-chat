@@ -1,0 +1,374 @@
+@font-face {
+  font-family: "Gellix";
+  src: url("./fonts/GellixTRIAL-SemiBold.woff") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gellix", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --primary-color: #e1ff57;
+}
+
+.header-login {
+  padding-left: 12%;
+  padding-right: 12%;
+  background-image: url(/images/banner-login.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  height: 50vh;
+}
+.header-login .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #02050a;
+  background-image: linear-gradient(45deg, #02050a29 0%, #e0ff5726 100%);
+  opacity: 0.9;
+  z-index: 1;
+}
+.header-login .content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 14%;
+  padding-right: 14%;
+}
+.header-login .content h2 {
+  font-size: 52px;
+  margin-bottom: 8px;
+}
+.header-login .content p {
+  font-weight: 700;
+}
+.header-login .content span {
+  color: var(--primary-color);
+  margin-right: 10px;
+}
+.login {
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: #02050a;
+  color: white;
+}
+.login .card {
+  box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+  border-radius: 8px;
+}
+.login .card a {
+  display: block;
+  margin-top: 80px;
+  color: var(--primary-color);
+}
+.login .card img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.login .card h3 {
+  font-size: 28px;
+  margin-bottom: 18px;
+  color: var(--primary-color);
+}
+
+.login .card label span {
+  color: red;
+}
+.login .card form label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 12px;
+  margin-top: 22px;
+}
+.login .card form input {
+  width: 100%;
+  background-color: #161e26;
+  border: none;
+  padding: 20px 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: white;
+}
+.login .card form input:focus {
+  outline: none;
+}
+.login #bottone1 {
+  padding-left: 33px;
+  padding-right: 33px;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  border-radius: 400px;
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.login #bottone1:hover {
+  box-shadow: 7px 5px 56px -14px var(--primary-color);
+  background-color: var(--primary-color);
+  color: black;
+}
+
+.login #bottone1:active {
+  transform: scale(0.97);
+  box-shadow: 7px 5px 56px -10px var(--primary-color);
+}
+.login .image-right {
+  position: relative;
+}
+.login .overlay {
+  position: absolute;
+  background-color: #02050a;
+  background-image: linear-gradient(45deg, #02050a29 0%, #e0ff574d 100%);
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+@media (max-width: 1628px) {
+  .header-login {
+    padding-left: 8%;
+    padding-right: 8%;
+    background-image: url(/images/banner-login.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    height: 50vh;
+  }
+  .login {
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #02050a;
+    color: white;
+  }
+}
+@media (max-width: 1328px) {
+  .header-login {
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    background-image: url(/images/banner-login.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    height: 50vh;
+  }
+  .login {
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #02050a;
+    color: white;
+  }
+}
+@media (max-width: 1028px) {
+  .header-login {
+    padding-left: 2%;
+    padding-right: 2%;
+    background-image: url(/images/banner-login.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    height: 50vh;
+  }
+  .header-login .content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 14%;
+    padding-right: 14%;
+  }
+  .login .card {
+    box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px;
+    border-radius: 8px;
+  }
+}
+@media (max-width: 700px) {
+  .login {
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #02050a;
+    color: white;
+  }
+  .header-login {
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    background-image: url(/images/banner-login.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    height: 50vh;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #02050a;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #e1ff57;
+}
+
+/* Start Footer Yousef Ababou */
+
+footer {
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  background-color: #02050a;
+  background-image: linear-gradient(45deg, #02050a 0%, #e0ff5717 100%);
+  color: white;
+}
+
+footer .contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding-bottom: 40px;
+}
+footer .contact .info {
+  display: flex;
+  align-items: center;
+}
+footer .contact .info i {
+  font-size: 42px;
+  margin-right: 8px;
+  color: var(--primary-color);
+}
+footer img {
+  width: 180px;
+}
+footer .contact .info h5 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+footer .contact .info p {
+  color: rgba(255, 255, 255, 0.533);
+}
+footer .footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+footer .footer h1 {
+  margin-bottom: 20px;
+}
+footer .footer h2 {
+  margin-bottom: 20px;
+}
+footer .footer p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+footer .footer ul li {
+  margin-top: 18px;
+  font-weight: 600;
+}
+footer .footer ul li a {
+  margin-top: 10px;
+  color: white;
+  transition: 0.4s ease-in-out;
+}
+footer .footer ul li a:hover {
+  color: var(--primary-color);
+}
+footer .footer h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+footer .footer i {
+  font-size: 25px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+footer .footer .line {
+  height: 1px;
+  background-color: #e0ff57cb;
+  width: 140px;
+  margin-bottom: 12px;
+}
+footer .footer .Subscribe {
+  display: flex;
+}
+footer .footer .Subscribe input {
+  background-color: #02050a;
+  border: none;
+  padding: 14px 30px;
+  color: white;
+  font-size: 18px;
+}
+footer .footer .Subscribe input:focus {
+  outline: #e1ff57;
+  border: 1px solid #e1ff57;
+}
+footer .footer .Subscribe button {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+footer .footer .col-1 i {
+  transition: 0.4s ease-in-out;
+}
+
+footer .footer .col-1 i:hover {
+  color: var(--primary-color);
+}
+
+/* End Footer Youusef Ababou */
